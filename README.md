@@ -1,5 +1,10 @@
 # Gulp (modules)
+<img src="https://adamlynch.com/images/blog-content/10-things-to-know-about-gulp/gulp.png" alt="" width="100%">
+
+---
+
 ## What is included
+
 - PUG
 - HTML
 - SCSS
@@ -18,6 +23,7 @@
 - Starter template
 
 ## Start Guide
+
 You should install:
 - [Node.js](http://nodejs.org)
 - Gulp CLI `npm install gulp-cli -g`
@@ -26,7 +32,7 @@ After:
 1. [Download ](https://github.com/NPavliuk/gulp-modules/archive/master.zip) from GitHub
 2. Unzip archive and in command line make `cd` into project folder
 3. Run `npm install`
-4. When it's done installing, run `npm run dev`
+4. When it's done installing, run `npm run dev`.
 
 ## Documentation
 
@@ -34,7 +40,42 @@ After:
 
 `/src/` - here your source code.
 
-`/dist/` - here compiled code. Do not edit this folder.
+```
+- src
+    - assets
+    - fonts
+    - images
+    - javascript
+        - modules
+        - application.js
+    - stylesheets
+        - base
+        - components
+        - helpers
+        - layouts
+        - application.scss
+    - views
+        - components
+        - data
+        - layouts
+        - pages
+        - parts
+        - index.html
+```
+
+`/dist/` - here compiled code. Do not edit this folder.\
+
+```
+- dist
+   - css
+     - application.min.js
+     - application.js
+   - fonts
+   - img
+   - js
+     - application.min.js
+   - index.html
+```
 
 ### Tasks
 `npm run dev` - run development mode
@@ -109,6 +150,9 @@ convertible fonts automatically connect to `src/stylesheets/base/fonts.scss` fil
 If you added new fonts and want the Gulp to reconnect them yourself you need to delete the existing file `fonts.scss`.
 
 ### Linters
+#### [ESlint](https://eslint.org/)
+
+Linter are launched when creating a commit or manually by command  `npm run lint:js`.
 
 #### [Stylelint](https://stylelint.io/)
 
@@ -193,10 +237,17 @@ We use plugin `stylelint-config-rational-order` for a single order of writing st
 }
 ```
 
-2. [ESlint](https://eslint.org/)
+### Lazy load
 
-Linter are launched when creating a commit or manually by command  `npm run lint:js`.
+For lazy loading we use [vanilla-lazyload](https://github.com/verlok/vanilla-lazyload).
 
-
-
-
+##### Lazy image:
+```scss
+<img alt="A lazy image" class="lazy" data-src="lazy.jpg" />
+```
+#### Lazy image with low quality placeholder:
+```scss
+<img alt="A lazy image" class="lazy" src="lazy-lowQuality.jpg" data-src="lazy.jpg" />
+```
+To have a low quality placeholder, add the src attribute pointing to a very small version of the `image` to the `img` tag `src="lazy_10.jpg"`.
+More functions you find [there](https://github.com/verlok/vanilla-lazyload#-getting-started---html)
