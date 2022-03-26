@@ -1,0 +1,46 @@
+// Theme
+$theme-colors: (
+  'primary': #000,
+  'secondary': #75b650,
+  'white': #000,
+) !default;
+
+// Breakpoints
+$breakpoints: (
+  'sm': 567px,
+  'md': 768px,
+  'lg': 992px,
+  'xl': 1200px,
+  'xxl': 1440px,
+) !default;
+
+// Spacers
+$spacer: 1rem;
+$spacers: (
+  1: ($spacer * .25),
+  2: ($spacer * .5),
+  3: $spacer,
+  4: ($spacer * .5),
+  5: ($spacer * 2),
+  6: ($spacer * 3),
+) !default;
+
+// Fonts
+$font-family-secondary: 'Arial', sans-serif;
+$font-family-primary: 'Arial', sans-serif;
+
+// Font sizes
+$font-size-base: 1rem;
+$font-size-headings: (
+  h1: $font-size-base * 4,
+  h2: $font-size-base * 3,
+  h3: $font-size-base * 2,
+  h4: $font-size-base * 1.5,
+  h5: $font-size-base * 1.25,
+  h6: $font-size-base,
+) !default;
+
+// Custom
+$border-radius: 1rem;
+$transition-time: .2s;
+$box-shadow: 0 0 0 #fff;

@@ -1,0 +1,76 @@
+{
+  "extends": [
+    "stylelint-config-standard",
+    "stylelint-config-rational-order"
+  ],
+  "customSyntax": "postcss-scss",
+  "rules": {
+    "indentation": 2,
+    "max-line-length": 180,
+    "max-empty-lines": [1, {
+      "ignore": ["comments"]
+    }],
+    "string-quotes": "single",
+
+    "declaration-empty-line-before": "never",
+    "declaration-block-semicolon-newline-after": "always",
+    "declaration-block-trailing-semicolon": "always",
+    "declaration-colon-newline-after": "always-multi-line",
+    "declaration-colon-space-after": "always-single-line",
+
+    "number-leading-zero": "never",
+    "number-no-trailing-zeros": true,
+
+    "color-hex-alpha": "never",
+    "color-named": "never",
+
+    "value-no-vendor-prefix": [true, {
+      "ignoreValues": ["fit-content"]
+    }],
+    "property-no-vendor-prefix": [true, {
+      "ignoreProperties": ["appearance", "font-smoothing", "text-size-adjust", "backdrop-filter"]
+    }],
+
+    "no-extra-semicolons": true,
+    "no-empty-first-line": true,
+    "no-eol-whitespace": [true, {
+      "ignore": ["empty-lines"]
+    }],
+
+    "block-opening-brace-space-before": "always",
+    "block-closing-brace-empty-line-before": "never",
+    "block-no-empty":[true, {
+      "ignore": ["comments"]
+    }],
+
+    "comment-no-empty": true,
+
+    "selector-combinator-space-before": "always",
+    "selector-combinator-space-after": "always",
+
+    "property-case": "lower",
+    "unit-case": "lower",
+    "selector-type-case": "lower",
+
+    "rule-empty-line-before": ["always", {
+      "except": ["after-single-line-comment", "first-nested"],
+      "ignore": ["after-comment"]
+    }],
+
+    "at-rule-semicolon-newline-after":"always",
+    "at-rule-name-space-after": "always-single-line",
+    "at-rule-empty-line-before": ["always", {
+      "except": ["first-nested"],
+      "ignore": ["after-comment"],
+      "ignoreAtRules": ["include", "import", "else"]
+    }],
+    "at-rule-no-unknown": null,
+
+    "function-no-unknown": [true, {
+      "ignoreFunctions": [
+        "get-spacer",
+        "get-theme-color"
+      ]
+    }]
+  }
+}

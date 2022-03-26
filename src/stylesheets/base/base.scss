@@ -1,0 +1,27 @@
+// Reset
+@import 'normalize.css/normalize';
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html {
+  height: 100%;
+  font-size: 16px;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  min-height: 100%;
+  font-family: $font-family-primary;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: middle;
+}

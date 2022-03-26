@@ -1,0 +1,25 @@
+{
+  "ignorePatterns": [
+    "**/vendor/*.js",
+    "node-modules/**/*.js"
+  ],
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
+    "no-unused-vars": ["error", { "vars": "all", "args": "none" }],
+    "no-trailing-spaces": ["error"],
+    "no-multiple-empty-lines": ["error", { "max": 2 }],
+    "prefer-const": ["error"],
+    "getter-return": ["error"],
+    "curly": ["error", "multi-line"],
+    "no-console": ["error", {"allow": ["warn", "error"]}]
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  }
+}

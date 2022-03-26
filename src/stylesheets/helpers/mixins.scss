@@ -1,0 +1,26 @@
+// Media queries
+@mixin respond-to($breakpoint) {
+  // If the key exists in the map
+  @if map-has-key($breakpoints, $breakpoint) {
+    // Prints a media query based on the value
+    @media screen and (min-width: map-get($breakpoints, $breakpoint)) {
+      @content;
+    }
+  }
+
+  @else {
+    @warn 'Unfortunately, no value could be retrieved from `#{$breakpoint}`.' + 'Available breakpoints are: #{map-keys($breakpoints)}.';
+  }
+}
+
+// Fonts main styles; Color param is optional
+@mixin font-styles($weight, $size, $line-height, $color: null) {
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+
+  // If the color exist in the map
+  @if $color {
+    color: $color;
+  }
+}

@@ -1,0 +1,11 @@
+extends layouts/default
+
+block variables
+    - const bodyClass = 'page-home'
+    - const pageTitle = 'Home page'
+
+block header
+    include parts/header-secondary
+
+block content
+    include pages/index/main
