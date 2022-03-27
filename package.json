@@ -12,8 +12,8 @@
     "fonts": "gulp fonts",
     "sprite": "gulp svgSprite",
     "prepare": "husky install",
-    "lint:js": "eslint src/javascript/**/*.js",
-    "lint:scss": "stylelint src/stylesheets/**/*.scss"
+    "lint:js": "eslint 'src/javascript/**/*.js'",
+    "lint:scss": "stylelint 'src/stylesheets/**/*.scss'"
   },
   "devDependencies": {
     "browser-sync": "^2.27.9",

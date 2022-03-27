@@ -2,7 +2,6 @@ import fs from 'fs'
 import ttf2woff from 'gulp-ttf2woff'
 import ttf2woff2 from 'gulp-ttf2woff2'
 
-
 export const ttfToWoff = () => {
     return app.gulp.src(`${app.path.srcFolder}/fonts/*.{woff,woff2}`, {})
         .pipe(app.gulp.dest(app.path.build.fonts))
@@ -15,18 +14,18 @@ export const ttfToWoff = () => {
 }
 
 export const fontStyle = () => {
-    let fontsFile = `${app.path.srcFolder}/stylesheets/base/fonts.scss`
+    const fontsFile = `${app.path.srcFolder}/stylesheets/base/fonts.scss`
 
     fs.readdir(app.path.build.fonts, function (err, fontsFiles) {
         if (fontsFiles) {
             if (!fs.existsSync(fontsFile)) {
                 fs.writeFile(fontsFile, '', cb)
-                let newFileOnly;
+                let newFileOnly
 
                 for( let i = 0; i < fontsFiles.length; i++) {
-                    let fontFileName = fontsFiles[i].split('.')[0]
+                    const  fontFileName = fontsFiles[i].split('.')[0]
                     if (newFileOnly !== fontFileName) {
-                        let fontName = fontFileName.split('-')[0] ? fontFileName.split('-')[0] : fontFileName
+                        const fontName = fontFileName.split('-')[0] ? fontFileName.split('-')[0] : fontFileName
                         let fontWeight = fontFileName.split('-')[1] ? fontFileName.split('-')[1] : fontFileName
 
                         switch (fontWeight.toLowerCase()) {
@@ -65,7 +64,7 @@ export const fontStyle = () => {
                     }
                 }
             } else {
-                console.log('File scss/fonts.scss already exist. Please remove fonts.scss file for continue work!')
+                console.error('File "stylesheets/base/fonts.scss" already exist. Please remove fonts.scss file for continue work!')
             }
         }
     })

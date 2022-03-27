@@ -1,7 +1,7 @@
 // Helpers
-@import 'helpers/variables';
-@import 'helpers/functions';
-@import 'helpers/mixins';
+@import 'abstract/variables';
+@import 'abstract/functions';
+@import 'abstract/mixins';
 
 // Base
 @import 'base/fonts';

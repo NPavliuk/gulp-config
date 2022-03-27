@@ -5,7 +5,7 @@ export const svgSprite = () => {
         .pipe(gulpSvgSprite({
             mode: {
                 symbol: {
-                    sprite: `../sprite-mono.svg`,
+                    sprite: '../sprite-mono.svg',
                     example: false
                 }
             },
@@ -28,7 +28,7 @@ export const svgSprite = () => {
         .pipe(gulpSvgSprite({
             mode: {
                 symbol: {
-                    sprite: `../sprite-multi.svg`,
+                    sprite: '../sprite-multi.svg',
                     example: false
                 }
             },

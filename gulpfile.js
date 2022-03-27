@@ -36,7 +36,7 @@ const watcher = () => {
   gulp.watch(path.watch.pug, pug)
   gulp.watch(path.watch.scss, scss)
   gulp.watch(path.watch.js, javascript)
-  gulp.watch(path.watch.js, images)
+  gulp.watch(path.watch.images, images)
 }
 
 // Fonts ttf to woff/woff2 & create font.scss with connected fonts

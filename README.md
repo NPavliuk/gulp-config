@@ -32,7 +32,9 @@ After:
 1. [Download ](https://github.com/NPavliuk/gulp-modules/archive/master.zip) from GitHub
 2. Unzip archive and in command line make `cd` into project folder
 3. Run `npm install`
-4. When it's done installing, run `npm run dev`.
+4. Run `git init`
+5. Run `husky install` to install pre-commit hook
+6. When it's done installing, run `npm run dev`.
 
 ## Documentation
 
@@ -49,9 +51,9 @@ After:
         - modules
         - application.js
     - stylesheets
+        - abstract
         - base
         - components
-        - helpers
         - layouts
         - application.scss
     - views
