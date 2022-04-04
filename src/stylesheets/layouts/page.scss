@@ -1,3 +1,34 @@
-.page-content {
-  flex-grow: 1;
+.page {
+  background-color: get-theme-color('primary');
+
+  &_content {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_title {
+    color: get-theme-color('white');
+    font-size: 100px;
+  }
+
+  &_header,
+  &_footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    color: get-theme-color('white');
+
+    a {
+      color: get-theme-color('white');
+      text-decoration: none;
+      transition: all $transition-time easy;
+
+      &:hover {
+        opacity: .8;
+      }
+    }
+  }
 }
